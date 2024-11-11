@@ -10,6 +10,14 @@ const getTotalIsles = function (grid) {
     dfs(i-1,j);
     dfs(i,j+1);
     dfs(i,j-1);
+  };
+  for(let i=0;i<rows;i++){
+    for(let j=0;j<cols;j++){
+      if(grid[i][j]==='L'){
+        count++;
+        dfs(i,j);
+      }
+    }
   }
 
   // write your code here
